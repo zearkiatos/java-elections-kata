@@ -1,13 +1,13 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: CandidatoTest.java 445 2007-06-25 16:30:28Z camil-ji $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
+ * Universidad de los Andes (Bogot√° - Colombia)
+ * Departamento de Ingenier√≠a de Sistemas y Computaci√≥n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n1_elecciones
- * Autor: Carlos AndrÈs Vega - 29-ene-2007
+ * Autor: Carlos Andr√©s Vega - 29-ene-2007
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
@@ -17,7 +17,7 @@ import uniandes.cupi2.elecciones.mundo.Candidato;
 import junit.framework.TestCase;
 
 /**
- * Esta es la clase usada para verificar que los mÈtodos de la clase Candidato estÈn correctamente implementados
+ * Esta es la clase usada para verificar que los m√©todos de la clase Candidato est√°n correctamente implementados
  */
 public class CandidatoTest extends TestCase
 {
@@ -27,12 +27,12 @@ public class CandidatoTest extends TestCase
     // -----------------------------------------------------------------
 
     /**
-     * Es la clase donde se har·n las pruebas
+     * Es la clase donde se har√≠n las pruebas
      */
     private Candidato candidato;
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√©todos
     // -------------------------
 
     /**
@@ -44,30 +44,30 @@ public class CandidatoTest extends TestCase
     }
 
     /**
-     * Prueba 1 - Test del mÈtodo constructor - Inicializar los datos del candidato correctamente
+     * Prueba 1 - Test del m√©todo constructor - Inicializar los datos del candidato correctamente
      */
     public void testInicializar( )
     {
         setupEscenario1( );
 
-        assertTrue( "No se crea con el nombre dado por par·metro", candidato.darNombre( ).equals( "Felipe" ) );
-        assertTrue( "No se crea con el apellido dado por par·metro", candidato.darApellido( ).equals( "Pitti" ) );
-        assertTrue( "No se crea con el partido polÌtico dado por par·metro", candidato.darPartidoPolitico( ).equals( "Independiente" ) );
-        assertTrue( "No se crea con la edad dada por par·metro", candidato.darEdad( ) == 27 );
-        assertTrue( "No se crea con el costo de campaÒa en 0", candidato.darCostoCampanha( ) == 0 );
-        assertTrue( "No se crea con el n˙mero de votos en 0", candidato.darVotos( ) == 0 );
+        assertTrue( "No se crea con el nombre dado por par√°metro", candidato.darNombre( ).equals( "Felipe" ) );
+        assertTrue( "No se crea con el apellido dado por par√°metro", candidato.darApellido( ).equals( "Pitti" ) );
+        assertTrue( "No se crea con el partido pol√≠tico dado por par√°metro", candidato.darPartidoPolitico( ).equals( "Independiente" ) );
+        assertTrue( "No se crea con la edad dada por par√°metro", candidato.darEdad( ) == 27 );
+        assertTrue( "No se crea con el costo de campa√±a en 0", candidato.darCostoCampanha( ) == 0 );
+        assertTrue( "No se crea con el n√∫mero de votos en 0", candidato.darVotos( ) == 0 );
        
     }
 
     /**
-     * Prueba 2 - Agregar un voto al candidato influenciado por la televisiÛn correctamente
+     * Prueba 2 - Agregar un voto al candidato influenciado por la televisi√≥n correctamente
      */
     public void testAgregarVotoTelevision( )
     {
         setupEscenario1( );
 
         candidato.agregarVotoTelevision( );
-        assertTrue( "No aumenta el costo de campaÒa en 1000", candidato.darCostoCampanha( ) == 1000 );
+        assertTrue( "No aumenta el costo de campa√±a en 1000", candidato.darCostoCampanha( ) == 1000 );
     }
 
     /**
@@ -78,7 +78,7 @@ public class CandidatoTest extends TestCase
         setupEscenario1( );
 
         candidato.agregarVotoRadio( );
-        assertTrue( "No aumenta el costo de campaÒa en 500", candidato.darCostoCampanha( ) == 500 );
+        assertTrue( "No aumenta el costo de campa√±a en 500", candidato.darCostoCampanha( ) == 500 );
     }
 
     /**
@@ -89,7 +89,7 @@ public class CandidatoTest extends TestCase
         setupEscenario1( );
 
         candidato.agregarVotoInternet( );
-        assertTrue( "No aumenta el costo de campaÒa en 100", candidato.darCostoCampanha( ) == 100 );
+        assertTrue( "No aumenta el costo de campa√±a en 100", candidato.darCostoCampanha( ) == 100 );
     }
 
     /**
@@ -104,12 +104,12 @@ public class CandidatoTest extends TestCase
         candidato.agregarVotoInternet( );
         candidato.reiniciarConteoVotos( );
 
-        assertTrue( "No inicializa el n˙mero de votos a 0", candidato.darVotos( ) == 0 );
-        assertTrue( "No inicializa el n˙mero de votos influenciados por internet a 0.", candidato.darVotosInfluenciaInternet()==0 );
+        assertTrue( "No inicializa el n√∫mero de votos a 0", candidato.darVotos( ) == 0 );
+        assertTrue( "No inicializa el n√∫mero de votos influenciados por internet a 0.", candidato.darVotosInfluenciaInternet()==0 );
     }
 
     /**
-     * Prueba 6 - Reiniciar el costo de campaÒa del candidato correctamente
+     * Prueba 6 - Reiniciar el costo de campa√±a del candidato correctamente
      */
     public void testReiniciarCostoCampanha( )
     {
@@ -120,7 +120,7 @@ public class CandidatoTest extends TestCase
         candidato.agregarVotoInternet( );
         candidato.reiniciarCostoCampanha( );
 
-        assertTrue( "No inicializa el costo de campaÒa a 0", candidato.darCostoCampanha( ) == 0 );
+        assertTrue( "No inicializa el costo de campa√±a a 0", candidato.darCostoCampanha( ) == 0 );
     }
     
     /**
@@ -130,10 +130,10 @@ public class CandidatoTest extends TestCase
     {
     	setupEscenario1();
     	candidato.agregarVotoGeneroMasculino();
-    	assertEquals("DeberÌa tener 1 voto.", 1, candidato.darVotosGeneroMasculino());
+    	assertEquals("Deber√≠a tener 1 voto.", 1, candidato.darVotosGeneroMasculino());
     	candidato.agregarVotoGeneroMasculino();
     	candidato.agregarVotoGeneroMasculino();
-    	assertEquals("DeberÌa tener 3 votos.", 3, candidato.darVotosGeneroMasculino());
+    	assertEquals("Deber√≠a tener 3 votos.", 3, candidato.darVotosGeneroMasculino());
     }
     
     /**
@@ -143,10 +143,10 @@ public class CandidatoTest extends TestCase
     {
     	setupEscenario1();
     	candidato.agregarVotoGeneroFemenino();
-    	assertEquals("DeberÌa tener 1 voto.", 1, candidato.darVotosGeneroFemenino());
+    	assertEquals("Deber√≠a tener 1 voto.", 1, candidato.darVotosGeneroFemenino());
     	candidato.agregarVotoGeneroFemenino();
     	candidato.agregarVotoGeneroFemenino();
-    	assertEquals("DeberÌa tener 3 votos.", 3, candidato.darVotosGeneroFemenino());
+    	assertEquals("Deber√≠a tener 3 votos.", 3, candidato.darVotosGeneroFemenino());
     }
     
     /**
@@ -156,10 +156,10 @@ public class CandidatoTest extends TestCase
     {
     	setupEscenario1();
     	candidato.agregarVotoEdadJoven();
-    	assertEquals("DeberÌa tener 1 voto.", 1, candidato.darVotosEdadJoven());
+    	assertEquals("Deber√≠a tener 1 voto.", 1, candidato.darVotosEdadJoven());
     	candidato.agregarVotoEdadJoven();
     	candidato.agregarVotoEdadJoven();
-    	assertEquals("DeberÌa tener 3 votos.", 3, candidato.darVotosEdadJoven());
+    	assertEquals("Deber√≠a tener 3 votos.", 3, candidato.darVotosEdadJoven());
     }
     
     /**
@@ -169,10 +169,10 @@ public class CandidatoTest extends TestCase
     {
     	setupEscenario1();
     	candidato.agregarVotoEdadMedia();
-    	assertEquals("DeberÌa tener 1 voto.", 1, candidato.darVotosEdadMedia());
+    	assertEquals("Deber√≠a tener 1 voto.", 1, candidato.darVotosEdadMedia());
     	candidato.agregarVotoEdadMedia();
     	candidato.agregarVotoEdadMedia();
-    	assertEquals("DeberÌa tener 3 votos.", 3, candidato.darVotosEdadMedia());
+    	assertEquals("Deber√≠a tener 3 votos.", 3, candidato.darVotosEdadMedia());
     }
     
     /**
@@ -182,10 +182,10 @@ public class CandidatoTest extends TestCase
     {
     	setupEscenario1();
     	candidato.agregarVotoEdadMayor();
-    	assertEquals("DeberÌa tener 1 voto.", 1, candidato.darVotosEdadMayor());
+    	assertEquals("Deber√≠a tener 1 voto.", 1, candidato.darVotosEdadMayor());
     	candidato.agregarVotoEdadMayor();
     	candidato.agregarVotoEdadMayor();
-    	assertEquals("DeberÌa tener 3 votos.", 3, candidato.darVotosEdadMayor());
+    	assertEquals("Deber√≠a tener 3 votos.", 3, candidato.darVotosEdadMayor());
     }
     
 }

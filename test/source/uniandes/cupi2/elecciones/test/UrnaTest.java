@@ -1,13 +1,13 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: UrnaTest.java 445 2007-06-25 16:30:28Z camil-ji $
- * Universidad de los Andes (Bogot· - Colombia)
- * Departamento de IngenierÌa de Sistemas y ComputaciÛn 
+ * Universidad de los Andes (Bogot√° - Colombia)
+ * Departamento de Ingenier√≠a de Sistemas y Computaci√≥n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n1_elecciones
- * Autor: Carlos AndrÈs Vega - 29-ene-2007
+ * Autor: Carlos Andr√©s Vega - 29-ene-2007
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
@@ -17,7 +17,7 @@ import junit.framework.TestCase;
 import uniandes.cupi2.elecciones.mundo.Urna;
 
 /**
- * Esta es la clase usada para verificar que los mÈtodos de la clase Urna estÈn correctamente implementados
+ * Esta es la clase usada para verificar que los m√©todos de la clase Urna est√°n correctamente implementados
  */
 public class UrnaTest extends TestCase
 {
@@ -26,16 +26,16 @@ public class UrnaTest extends TestCase
     // -----------------------------------------------------------------
 
     /**
-     * Es la clase donde se har·n las pruebas
+     * Es la clase donde se har√°n las pruebas
      */
     private Urna urna;
 
     // -----------------------------------------------------------------
-    // MÈtodos
+    // M√©todos
     // -----------------------------------------------------------------
 
     /**
-     * Construye una nueva Urna vacÌa
+     * Construye una nueva Urna vac√≠a
      * 
      */
     private void setupEscenario1( )
@@ -83,7 +83,7 @@ public class UrnaTest extends TestCase
     }
 
     /**
-     * Prueba 1 - InicializaciÛn de los candidatos
+     * Prueba 1 - Inicializaci√≥n de los candidatos
      */
     public void testInicializacion( )
     {
@@ -94,13 +94,13 @@ public class UrnaTest extends TestCase
     }
 
     /**
-     * Prueba 2 - Ingresar voto influenciado por la televisiÛn al candidato 1
+     * Prueba 2 - Ingresar voto influenciado por la televisi√≥n al candidato 1
      */
     public void testIngresarVotoTelevisionCandidato1( )
     {
         setupEscenario1( );
         urna.ingresarVotoTelevisionCandidato1( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 1000", urna.darCandidato1( ).darCostoCampanha( ) == 1000 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 1000", urna.darCandidato1( ).darCostoCampanha( ) == 1000 );
     }
 
     /**
@@ -110,7 +110,7 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoRadioCandidato1( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 500", urna.darCandidato1( ).darCostoCampanha( ) == 500 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 500", urna.darCandidato1( ).darCostoCampanha( ) == 500 );
     }
 
     /**
@@ -120,17 +120,17 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoInternetCandidato1( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 100", urna.darCandidato1( ).darCostoCampanha( ) == 100 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 100", urna.darCandidato1( ).darCostoCampanha( ) == 100 );
     }
 
     /**
-     * Prueba 5 - Ingresar voto influenciado por la televisiÛn al candidato 2
+     * Prueba 5 - Ingresar voto influenciado por la televisi√≥n al candidato 2
      */
     public void testIngresarVotoTelevisionCandidato2( )
     {
         setupEscenario1( );
         urna.ingresarVotoTelevisionCandidato2( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 1000", urna.darCandidato2( ).darCostoCampanha( ) == 1000 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 1000", urna.darCandidato2( ).darCostoCampanha( ) == 1000 );
     }
 
     /**
@@ -140,7 +140,7 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoRadioCandidato2( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 500", urna.darCandidato2( ).darCostoCampanha( ) == 500 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 500", urna.darCandidato2( ).darCostoCampanha( ) == 500 );
     }
 
     /**
@@ -150,17 +150,17 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoInternetCandidato2( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 100", urna.darCandidato2( ).darCostoCampanha( ) == 100 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 100", urna.darCandidato2( ).darCostoCampanha( ) == 100 );
     }
 
     /**
-     * Prueba 8 - Ingresar voto influenciado por la televisiÛn al candidato 3
+     * Prueba 8 - Ingresar voto influenciado por la televisi√≥n al candidato 3
      */
     public void testIngresarVotoTelevisionCandidato3( )
     {
         setupEscenario1( );
         urna.ingresarVotoTelevisionCandidato3( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 1000", urna.darCandidato3( ).darCostoCampanha( ) == 1000 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 1000", urna.darCandidato3( ).darCostoCampanha( ) == 1000 );
     }
 
     /**
@@ -170,7 +170,7 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoRadioCandidato3( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 500", urna.darCandidato3( ).darCostoCampanha( ) == 500 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 500", urna.darCandidato3( ).darCostoCampanha( ) == 500 );
     }
 
     /**
@@ -180,7 +180,7 @@ public class UrnaTest extends TestCase
     {
         setupEscenario1( );
         urna.ingresarVotoInternetCandidato3( );
-        assertTrue( "DeberÌa aumentar el costo de campaÒa en 100", urna.darCandidato3( ).darCostoCampanha( ) == 100 );
+        assertTrue( "Deber√≠a aumentar el costo de campa√±a en 100", urna.darCandidato3( ).darCostoCampanha( ) == 100 );
     }
 
     /**
@@ -195,17 +195,17 @@ public class UrnaTest extends TestCase
     }
 
     /**
-     * Prueba 12 - Calcular el costo promedio de campaÒa de los candidatos
+     * Prueba 12 - Calcular el costo promedio de campa√±a de los candidatos
      */
     public void testCalcularCostoPromedioCampanha( )
     {
         setupEscenario2( );
 
-        assertTrue( "No calcula el costo promedio de campaÒa correctamente", urna.calcularCostoPromedioCampanha( ) == 1600 );
+        assertTrue( "No calcula el costo promedio de campa√±a correctamente", urna.calcularCostoPromedioCampanha( ) == 1600 );
     }
 
     /**
-     * Prueba 13 - Vaciar la urna de votaciÛn
+     * Prueba 13 - Vaciar la urna de votaci√≥n
      */
     public void testVaciarUrna( )
     {
@@ -213,14 +213,14 @@ public class UrnaTest extends TestCase
 
         urna.vaciarUrna( );
 
-        assertTrue( "No inicializa el n˙mero de votos a 0 del candidato 1", urna.darCandidato1( ).darVotos( ) == 0 );
-        assertTrue( "No inicializa el costo de campaÒa a 0 del candidato 1", urna.darCandidato1( ).darCostoCampanha( ) == 0 );
+        assertTrue( "No inicializa el n√∫mero de votos a 0 del candidato 1", urna.darCandidato1( ).darVotos( ) == 0 );
+        assertTrue( "No inicializa el costo de campa√±a a 0 del candidato 1", urna.darCandidato1( ).darCostoCampanha( ) == 0 );
 
-        assertTrue( "No inicializa el n˙mero de votos a 0 del candidato 2", urna.darCandidato2( ).darVotos( ) == 0 );
-        assertTrue( "No inicializa el costo de campaÒa a 0 del candidato 2", urna.darCandidato2( ).darCostoCampanha( ) == 0 );
+        assertTrue( "No inicializa el n√∫mero de votos a 0 del candidato 2", urna.darCandidato2( ).darVotos( ) == 0 );
+        assertTrue( "No inicializa el costo de campa√±a a 0 del candidato 2", urna.darCandidato2( ).darCostoCampanha( ) == 0 );
 
-        assertTrue( "No inicializa el n˙mero de votos a 0 del candidato 3", urna.darCandidato3( ).darVotos( ) == 0 );
-        assertTrue( "No inicializa el costo de campaÒa a 0 del candidato 3", urna.darCandidato3( ).darCostoCampanha( ) == 0 );
+        assertTrue( "No inicializa el n√∫mero de votos a 0 del candidato 3", urna.darCandidato3( ).darVotos( ) == 0 );
+        assertTrue( "No inicializa el costo de campa√±a a 0 del candidato 3", urna.darCandidato3( ).darCostoCampanha( ) == 0 );
 
     }
     
@@ -351,7 +351,7 @@ public class UrnaTest extends TestCase
     }
 
     /**
-     * Prueba 23 - Registra votos para gÈnero masculino del candidato 1.
+     * Prueba 23 - Registra votos para g√©nero masculino del candidato 1.
      */
     public void testRegistrarVotoGeneroMasculino1()
     {
@@ -366,7 +366,7 @@ public class UrnaTest extends TestCase
     }
     
     /**
-     * Prueba 24 - Registra votos para gÈnero masculino del candidato 1.
+     * Prueba 24 - Registra votos para g√©nero masculino del candidato 1.
      */
     public void testRegistrarVotoGeneroMasculino2()
     {
@@ -381,7 +381,7 @@ public class UrnaTest extends TestCase
     }
     
     /**
-     * Prueba 25 - Registra votos para gÈnero masculino del candidato 1.
+     * Prueba 25 - Registra votos para g√©nero masculino del candidato 1.
      */
     public void testRegistrarVotoGeneroMasculino3()
     {
@@ -396,7 +396,7 @@ public class UrnaTest extends TestCase
     }
     
     /**
-     * Prueba 26 - Registra votos para gÈnero femenino del candidato 1.
+     * Prueba 26 - Registra votos para g√©nero femenino del candidato 1.
      */
     public void testRegistrarVotoGeneroFemenino1()
     {
@@ -411,7 +411,7 @@ public class UrnaTest extends TestCase
     }
     
     /**
-     * Prueba 27 - Registra votos para gÈnero femenino del candidato 1.
+     * Prueba 27 - Registra votos para g√©nero femenino del candidato 1.
      */
     public void testRegistrarVotoGeneroFemenino2()
     {
@@ -426,7 +426,7 @@ public class UrnaTest extends TestCase
     }
     
     /**
-     * Prueba 28 - Registra votos para gÈnero femenino del candidato 1.
+     * Prueba 28 - Registra votos para g√©nero femenino del candidato 1.
      */
     public void testRegistrarVotoGeneroFemenino3()
     {
@@ -446,7 +446,7 @@ public class UrnaTest extends TestCase
     public void testcCalcularPorcentajeVotosPorInternet1()
     {
     	setupEscenario3();
-    	assertEquals("El porcentaje del candidato 1 no est· bien.", 50, urna.calcularPorcentajeVotosPorInternetCandidato1(), 0.1);
+    	assertEquals("El porcentaje del candidato 1 no est√° bien.", 50, urna.calcularPorcentajeVotosPorInternetCandidato1(), 0.1);
     }
     
     /**
@@ -455,7 +455,7 @@ public class UrnaTest extends TestCase
     public void testcCalcularPorcentajeVotosPorInternet2()
     {
     	setupEscenario3();
-    	assertEquals("El porcentaje del candidato 2 no est· bien.", 30, urna.calcularPorcentajeVotosPorInternetCandidato2(), 0.1);
+    	assertEquals("El porcentaje del candidato 2 no est√° bien.", 30, urna.calcularPorcentajeVotosPorInternetCandidato2(), 0.1);
     }
     
     /**
@@ -464,6 +464,6 @@ public class UrnaTest extends TestCase
     public void testcCalcularPorcentajeVotosPorInternet3()
     {
     	setupEscenario3();
-    	assertEquals("El porcentaje del candidato 3 no est· bien.", 20, urna.calcularPorcentajeVotosPorInternetCandidato3(), 0.1);
+    	assertEquals("El porcentaje del candidato 3 no est√° bien.", 20, urna.calcularPorcentajeVotosPorInternetCandidato3(), 0.1);
     }
 }
