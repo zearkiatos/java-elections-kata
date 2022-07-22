@@ -1,24 +1,23 @@
 /**
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  * $Id: Candidato.java 445 2007-06-25 16:30:28Z camil-ji $
- * Universidad de los Andes (Bogotá - Colombia)
- * Departamento de Ingeniería de Sistemas y Computación 
+ * Universidad de los Andes (Bogotï¿½ - Colombia)
+ * Departamento de Ingenierï¿½a de Sistemas y Computaciï¿½n 
  * Licenciado bajo el esquema Academic Free License version 2.1 
  *
  * Proyecto Cupi2 (http://cupi2.uniandes.edu.co)
  * Ejercicio: n1_elecciones
- * Autor: Carlos Andrés Vega - 29-ene-2007
+ * Autor: Carlos Andrï¿½s Vega - 29-ene-2007
  * ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
  */
 
 package uniandes.cupi2.elecciones.mundo;
 
 /**
- * Candidato de la elección.
+ * Candidato de la elecciï¿½n.
  */
 
-public class Candidato
-{
+public class Candidato {
 
     // -----------------------------------------------------------------
     // Atributos
@@ -35,7 +34,7 @@ public class Candidato
     private String apellido;
 
     /**
-     * Partido político del candidato.
+     * Partido polï¿½tico del candidato.
      */
     private String partidoPolitico;
 
@@ -45,280 +44,284 @@ public class Candidato
     private int edad;
 
     /**
-     * Costo de campaña del candidato.
+     * Costo de campaï¿½a del candidato.
      */
     private double costoCampanha;
 
     /**
-     * Número de votos del candidato.
+     * Nï¿½mero de votos del candidato.
      */
     private int votos;
-    
-    /**
-     * Número de votos influenciados por internet.
-     */
-    //TODO Declare el atributo de votos influenciados por internet.
-    
-    /**
-     * Número de votos de género femenino.
-     */
-    //TODO Declare el atributo de género femenino.
-    
-    /**
-     * Número de votos de género masculino.
-     */
-    //TODO Declare el atributo de género masculino.
-    
-    /**
-     * Número de votos de edad joven (18 - 34).
-     */
-    //TODO Declare el atributo de rango de edad joven.
-    
-    /**
-     * Número de votos de edad media (35 - 54).
-     */
-    //TODO Declare el atributo de rango de edad media.
-    
-    /**
-     * Número de votos de edad mayor (55 ó más).
-     */
-    //TODO Declare el atributo de rango de edad mayor.
 
+    /**
+     * Nï¿½mero de votos influenciados por internet.
+     */
+    private int votosInfluenciaInternet;
+
+    /**
+     * Nï¿½mero de votos de gï¿½nero femenino.
+     */
+    private int votoGeneroFemenino;
+
+    /**
+     * Nï¿½mero de votos de gï¿½nero masculino.
+     */
+    private int votoGeneroMasculino;
+
+    /**
+     * Nï¿½mero de votos de edad joven (18 - 34).
+     */
+    private int votoEdadJoven;
+
+    /**
+     * Nï¿½mero de votos de edad media (35 - 54).
+     */
+    private int votoEdadMedia;
+
+    /**
+     * Nï¿½mero de votos de edad mayor (55 ï¿½ mï¿½s).
+     */
+    private int votoEdadMayor;
 
     // -----------------------------------------------------------------
-    // Métodos
+    // Mï¿½todos
     // -----------------------------------------------------------------
 
     /**
-     * Inicializa los datos del candidato con los valores que vienen por parámetro. <br>
-     * <b>post: </b> El costo de campaña se inicializó en cero<br>
-     * El número de votos se inicializó en cero. <br>
-     * @param nNombre Nombre del candidato
-     * @param nApellido Apellido del Candidato
-     * @param nPartidoPolitico Partido político del candidato
-     * @param nEdad Edad del candidato
+     * Inicializa los datos del candidato con los valores que vienen por parï¿½metro.
+     * <br>
+     * <b>post: </b> El costo de campaï¿½a se inicializï¿½ en cero<br>
+     * El nï¿½mero de votos se inicializï¿½ en cero. <br>
+     * 
+     * @param nNombre          Nombre del candidato
+     * @param nApellido        Apellido del Candidato
+     * @param nPartidoPolitico Partido polï¿½tico del candidato
+     * @param nEdad            Edad del candidato
      */
 
-    public Candidato( String nNombre, String nApellido, String nPartidoPolitico, int nEdad )
-    {
+    public Candidato(String nNombre, String nApellido, String nPartidoPolitico, int nEdad) {
         nombre = nNombre;
         apellido = nApellido;
         partidoPolitico = nPartidoPolitico;
         edad = nEdad;
         costoCampanha = 0;
         votos = 0;
-        
-        //TODO Inicialice los atributos de las estadísticas sobre los votos
-        
+        votosInfluenciaInternet = 0;
+        votosGeneroMasculino = 0;
+        votosGeneroFemenino = 0;
+        votosEdadJoven = 0;
+        votosEdadMedia = 0;
+        votosEdadMayor = 0;
+
     }
 
     /**
      * Devuelve el nombre del candidato.
+     * 
      * @return nombre del candidato.
      */
-    public String darNombre( )
-    {
+    public String darNombre() {
         return nombre;
     }
 
     /**
      * Devuelve el apellido del candidato.
+     * 
      * @return apellido del candidato.
      */
-    public String darApellido( )
-    {
+    public String darApellido() {
         return apellido;
     }
 
     /**
-     * Devuelve el partido político del candidato.
-     * @return partido político del candidato.
+     * Devuelve el partido polï¿½tico del candidato.
+     * 
+     * @return partido polï¿½tico del candidato.
      */
-    public String darPartidoPolitico( )
-    {
+    public String darPartidoPolitico() {
         return partidoPolitico;
     }
 
     /**
      * Devuelve la edad del candidato.
+     * 
      * @return edad del candidato.
      */
-    public int darEdad( )
-    {
+    public int darEdad() {
         return edad;
     }
 
     /**
-     * Devuelve el costo de campaña del candidato.
-     * @return costo de campaña del candidato.
+     * Devuelve el costo de campaï¿½a del candidato.
+     * 
+     * @return costo de campaï¿½a del candidato.
      */
-    public double darCostoCampanha( )
-    {
+    public double darCostoCampanha() {
         return costoCampanha;
     }
 
     /**
-     * Devuelve el número de votos del candidato.
-     * @return número de votos obtenidos.
+     * Devuelve el nï¿½mero de votos del candidato.
+     * 
+     * @return nï¿½mero de votos obtenidos.
      */
-    public int darVotos( )
-    {
+    public int darVotos() {
         return votos;
     }
-    
+
     /**
-     * Devuelve el número de votos influenciados por internet.
-     * @return número de votos influenciados por internet.
+     * Devuelve el nï¿½mero de votos influenciados por internet.
+     * 
+     * @return nï¿½mero de votos influenciados por internet.
      */
-    public int darVotosInfluenciaInternet()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosInfluenciaInternet() {
+        return votosInfluenciaInternet;
     }
-    
+
     /**
-     * Devuelve el número de votos de género femenino.
-     * @return número de votos de género femenino.
+     * Devuelve el nï¿½mero de votos de gï¿½nero femenino.
+     * 
+     * @return nï¿½mero de votos de gï¿½nero femenino.
      */
-    public int darVotosGeneroFemenino()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosGeneroFemenino() {
+        return votosGeneroFemenino;
     }
-    
+
     /**
-     * Devuelve el número de votos de género masculino.
-     * @return número de votos de género masculino.
+     * Devuelve el nï¿½mero de votos de gï¿½nero masculino.
+     * 
+     * @return nï¿½mero de votos de gï¿½nero masculino.
      */
-    public int darVotosGeneroMasculino()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosGeneroMasculino() {
+        return votosGeneroMasculino;
     }
-    
+
     /**
-     * Devuelve el número de votos de edad joven.
-     * @return número de votos de edad joven.
+     * Devuelve el nï¿½mero de votos de edad joven.
+     * 
+     * @return nï¿½mero de votos de edad joven.
      */
-    public int darVotosEdadJoven()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosEdadJoven() {
+        return votosEdadJoven;
     }
-    
+
     /**
-     * Devuelve el número de votos de edad media.
-     * @return número de votos de edad media.
+     * Devuelve el nï¿½mero de votos de edad media.
+     * 
+     * @return nï¿½mero de votos de edad media.
      */
-    public int darVotosEdadMedia()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosEdadMedia() {
+        return votosEdadMedia;
     }
-    
+
     /**
-     * Devuelve el número de votos de edad mayor.
-     * @return número de votos de edad mayor.
+     * Devuelve el nï¿½mero de votos de edad mayor.
+     * 
+     * @return nï¿½mero de votos de edad mayor.
      */
-    public int darVotosEdadMayor()
-    {
-    	//TODO  Complete el método segú la documentación.
+    public int darVotosEdadMayor() {
+        return votosEdadMayor;
     }
 
     /**
      * Ingresa un voto al candidato.<br>
-     * <b>post: </b> Se modificó el número de votos aumentándose el existente en 1.
+     * <b>post: </b> Se modificï¿½ el nï¿½mero de votos aumentï¿½ndose el existente en 1.
      */
-    public void ingresarUnVoto( )
-    {
+    public void ingresarUnVoto() {
         votos = votos + 1;
     }
 
     /**
-     * Adiciona un voto influenciado por la televisión <br<
-     * <b>post: </b> Se adiciona al costo de la campaña la suma de $1000 y se incrementa el número de votos totales en 1.
+     * Adiciona un voto influenciado por la televisiï¿½n <br<
+     * <b>post: </b> Se adiciona al costo de la campaï¿½a la suma de $1000 y se
+     * incrementa el nï¿½mero de votos totales en 1.
      */
-    public void agregarVotoTelevision( )
-    {
+    public void agregarVotoTelevision() {
         costoCampanha = costoCampanha + 1000;
     }
 
     /**
      * Adiciona un voto influenciado por la radio <br>
-     * <b>post: </b> Se adiciona al costo de la campaña la suma de $500 y se incrementa el número de votos totales en 1.
+     * <b>post: </b> Se adiciona al costo de la campaï¿½a la suma de $500 y se
+     * incrementa el nï¿½mero de votos totales en 1.
      * 
      */
-    public void agregarVotoRadio( )
-    {
+    public void agregarVotoRadio() {
         costoCampanha = costoCampanha + 500;
     }
 
     /**
      * Adiciona un voto influenciado por Internet <br>
-     * <b>post: </b> Se adiciona al costo de la campaña la suma de $100, se incrementa el número de votos totales en 1. 
-     * Se incrementa en 1 el número de votos influenciados por internet.
+     * <b>post: </b> Se adiciona al costo de la campaï¿½a la suma de $100, se
+     * incrementa el nï¿½mero de votos totales en 1.
+     * Se incrementa en 1 el nï¿½mero de votos influenciados por internet.
      */
-    public void agregarVotoInternet( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoInternet() {
+        costoCampanha+=100;
+        votos++;
+        votosInfluenciaInternet++;
     }
-    
+
     /**
-     * Adiciona un voto dado por un votante de género femenino <br>
-     * <b>post: </b> Se incrementa el número de votos de género femenino en 1.
+     * Adiciona un voto dado por un votante de gï¿½nero femenino <br>
+     * <b>post: </b> Se incrementa el nï¿½mero de votos de gï¿½nero femenino en 1.
      */
-    public void agregarVotoGeneroFemenino( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoGeneroFemenino() {
+        votoGeneroFemenino++;
     }
-    
+
     /**
-     * Adiciona un voto dado por un votante de género masculino <br>
-     * <b>post: </b> Se incrementa el número de votos de género masculino en 1.
+     * Adiciona un voto dado por un votante de gï¿½nero masculino <br>
+     * <b>post: </b> Se incrementa el nï¿½mero de votos de gï¿½nero masculino en 1.
      */
-    public void agregarVotoGeneroMasculino( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoGeneroMasculino() {
+        votoGeneroMasculino++;
     }
-    
+
     /**
      * Adiciona un voto dado por un votante de edad joven <br>
-     * <b>post: </b> Se incrementa el número de votos de edad joven en 1.
+     * <b>post: </b> Se incrementa el nï¿½mero de votos de edad joven en 1.
      */
-    public void agregarVotoEdadJoven( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoEdadJoven() {
+        votoEdadJoven++;
     }
-    
+
     /**
      * Adiciona un voto dado por un votante de edad media <br>
-     * <b>post: </b> Se incrementa el número de votos de edad media en 1.
+     * <b>post: </b> Se incrementa el nï¿½mero de votos de edad media en 1.
      */
-    public void agregarVotoEdadMedia( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoEdadMedia() {
+        votoEdadMedia++;
     }
-    
+
     /**
      * Adiciona un voto dado por un votante de edad mayor <br>
-     * <b>post: </b> Se incrementa el número de votos de edad mayor en 1.
+     * <b>post: </b> Se incrementa el nï¿½mero de votos de edad mayor en 1.
      */
-    public void agregarVotoEdadMayor( )
-    {
-    	//TODO  Complete el método segú la documentación.
+    public void agregarVotoEdadMayor() {
+        votoEdadMayor++;
     }
 
     /**
-     * Se reinicia el conteo de votos 
-     * <b>post: </b> votos = 0. votosGeneroFemenino = 0. votosGeneroMasculino = 0. votosEdadJoven = 0.
-     * 	votosEdadMedia = 0. votosEdadMayor = 0. votosInfluenciaInternet=0
+     * Se reinicia el conteo de votos
+     * <b>post: </b> votos = 0. votosGeneroFemenino = 0. votosGeneroMasculino = 0.
+     * votosEdadJoven = 0.
+     * votosEdadMedia = 0. votosEdadMayor = 0. votosInfluenciaInternet=0
      */
-    public void reiniciarConteoVotos( )
-    {
+    public void reiniciarConteoVotos() {
         votos = 0;
-        //TODO  Complete el método segú la documentación.
+        votoGeneroMasculino = 0;
+        votosGeneroFemenino = 0;
+        votosEdadJoven = 0;
+        votosEdadMedia = 0;
+        votosEdadMayor = 0;
+        votosInfluenciaInternet = 0;
     }
 
     /**
-     * Se reinicia el costo de campaña <b>post: </b> costoCampanha = 0.
+     * Se reinicia el costo de campaï¿½a <b>post: </b> costoCampanha = 0.
      */
-    public void reiniciarCostoCampanha( )
-    {
+    public void reiniciarCostoCampanha() {
         costoCampanha = 0;
     }
 }
