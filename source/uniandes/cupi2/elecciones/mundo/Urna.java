@@ -179,35 +179,35 @@ public class Urna {
      * Registra un voto de g�nero femenino al candidato 2.
      */
     public void registrarVotoGeneroFemeninoCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato2.agregarVotoGeneroFemenino();
     }
 
     /**
      * Registra un voto de g�nero masculino al candidato 2.
      */
     public void registrarVotoGeneroMasculinoCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato2.agregarVotoGeneroMasculino();
     }
 
     /**
      * Registra un voto de edad joven al candidato 2.
      */
     public void registrarVotoEdadJovenCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato2.agregarVotoEdadJoven();
     }
 
     /**
      * Registra un voto de edad media al candidato 2.
      */
     public void registrarVotoEdadMediaCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato2.agregarVotoEdadMedia();
     }
 
     /**
      * Registra un voto de edad mayor al candidato 2.
      */
     public void registrarVotoEdadMayorCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato2.agregarVotoEdadMayor();
     }
 
     /**
@@ -242,35 +242,35 @@ public class Urna {
      * Registra un voto de g�nero femenino al candidato 3.
      */
     public void registrarVotoGeneroFemeninoCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato3.agregarVotoGeneroFemenino();
     }
 
     /**
      * Registra un voto de g�nero masculino al candidato 3.
      */
     public void registrarVotoGeneroMasculinoCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato3.agregarVotoGeneroMasculino();
     }
 
     /**
      * Registra un voto de edad joven al candidato 3.
      */
     public void registrarVotoEdadJovenCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato3.agregarVotoEdadJoven();
     }
 
     /**
      * Registra un voto de edad media al candidato 3.
      */
     public void registrarVotoEdadMediaCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato3.agregarVotoEdadMedia();
     }
 
     /**
      * Registra un voto de edad mayor al candidato 3.
      */
     public void registrarVotoEdadMayorCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        candidato3.agregarVotoEdadMayor();
     }
 
     /**
@@ -298,7 +298,8 @@ public class Urna {
      * @return La sumatoria de los votos de g�nero femenino de los tres candidatos
      */
     public int calcularTotalVotosGeneroFemenino() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        return candidato1.darVotosGeneroFemenino() + candidato2.darVotosGeneroFemenino()
+                + candidato3.darVotosGeneroFemenino();
     }
 
     /**
@@ -308,7 +309,8 @@ public class Urna {
      *         candidatos
      */
     public int calcularTotalVotosGeneroMasculino() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        return candidato1.darVotosGeneroMasculino() + candidato2.darVotosGeneroMasculino()
+                + candidato3.darVotosGeneroMasculino();
     }
 
     /**
@@ -317,7 +319,7 @@ public class Urna {
      * @return La sumatoria de los votos de edad joven de los tres candidatos
      */
     public int calcularTotalVotosEdadJoven() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        return candidato1.darVotosEdadJoven() + candidato2.darVotosEdadJoven() + candidato2.darVotosEdadJoven();
     }
 
     /**
@@ -326,7 +328,7 @@ public class Urna {
      * @return La sumatoria de los votos de edad media de los tres candidatos
      */
     public int calcularTotalVotosEdadMedia() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        return candidato1.darVotosEdadMedia() + candidato2.darVotosEdadMedia() + candidato3.darVotosEdadMedia();
     }
 
     /**
@@ -335,7 +337,7 @@ public class Urna {
      * @return La sumatoria de los votos de edad mayor de los tres candidatos
      */
     public int calcularTotalVotosEdadMayor() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        return candidato1.darVotosEdadMayor() + candidato2.darVotosEdadMayor() + candidato3.darVotosEdadMayor();
     }
 
     /**
@@ -423,7 +425,10 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 1.
      */
     public double calcularPorcentajeVotosPorInternetCandidato1() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        int totalVotos = calcularTotalVotos();
+        double internetVotosAverage = candidato1.darVotosInfluenciaInternet()/totalVotos();
+
+        return internetVotosAverage;
     }
 
     /**
@@ -433,7 +438,10 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 2.
      */
     public double calcularPorcentajeVotosPorInternetCandidato2() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        int totalVotos = calcularTotalVotos();
+        double internetVotosAverage = candidato2.darVotosInfluenciaInternet()/totalVotos();
+
+        return internetVotosAverage;
     }
 
     /**
@@ -443,7 +451,10 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 3.
      */
     public double calcularPorcentajeVotosPorInternetCandidato3() {
-        // TODO Complete el m�todo seg�n la documentaci�n.
+        int totalVotos = calcularTotalVotos();
+        double internetVotosAverage = candidato3.darVotosInfluenciaInternet()/totalVotos();
+
+        return internetVotosAverage;
     }
 
     /**
