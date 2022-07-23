@@ -425,10 +425,13 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 1.
      */
     public double calcularPorcentajeVotosPorInternetCandidato1() {
-        int totalVotos = calcularTotalVotos();
-        double internetVotosAverage = candidato1.darVotosInfluenciaInternet()/totalVotos();
+    	int votosCandidato1 = candidato1.darVotosInfluenciaInternet();
+        int totalVotos = votosCandidato1 + candidato2.darVotosInfluenciaInternet() + candidato3.darVotosInfluenciaInternet();
+        double internetVotosAverage;
+       
+        internetVotosAverage = (double)votosCandidato1/totalVotos;
 
-        return internetVotosAverage;
+        return internetVotosAverage*100;
     }
 
     /**
@@ -438,10 +441,12 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 2.
      */
     public double calcularPorcentajeVotosPorInternetCandidato2() {
-        int totalVotos = calcularTotalVotos();
-        double internetVotosAverage = candidato2.darVotosInfluenciaInternet()/totalVotos();
+    	int votosCandidato2 = candidato2.darVotosInfluenciaInternet();
+        int totalVotos = votosCandidato2 + candidato1.darVotosInfluenciaInternet() + candidato3.darVotosInfluenciaInternet();
+        double internetVotosAverage;
+        internetVotosAverage = (double)votosCandidato2/totalVotos;
 
-        return internetVotosAverage;
+        return internetVotosAverage*100;
     }
 
     /**
@@ -451,10 +456,12 @@ public class Urna {
      * @return porcentaje de votos obtenidos por internet por el candidato 3.
      */
     public double calcularPorcentajeVotosPorInternetCandidato3() {
-        int totalVotos = calcularTotalVotos();
-        double internetVotosAverage = candidato3.darVotosInfluenciaInternet()/totalVotos();
+    	int votosCandidato3 = candidato3.darVotosInfluenciaInternet();
+        int totalVotos = votosCandidato3 + candidato1.darVotosInfluenciaInternet() + candidato2.darVotosInfluenciaInternet();
+        double internetVotosAverage;
+        internetVotosAverage = (double)votosCandidato3/totalVotos;
 
-        return internetVotosAverage;
+        return internetVotosAverage*100;
     }
 
     /**
@@ -475,7 +482,6 @@ public class Urna {
         candidato3.reiniciarConteoVotos();
         candidato3.reiniciarCostoCampanha();
     }
-
     // -----------------------------------------------------------------
     // Puntos de Extensi�n
     // -----------------------------------------------------------------

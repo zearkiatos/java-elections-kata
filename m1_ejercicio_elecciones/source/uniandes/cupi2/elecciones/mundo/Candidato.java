@@ -107,11 +107,11 @@ public class Candidato {
         costoCampanha = 0;
         votos = 0;
         votosInfluenciaInternet = 0;
-        votosGeneroMasculino = 0;
-        votosGeneroFemenino = 0;
-        votosEdadJoven = 0;
-        votosEdadMedia = 0;
-        votosEdadMayor = 0;
+        votoGeneroMasculino = 0;
+        votoGeneroFemenino = 0;
+        votoEdadJoven = 0;
+        votoEdadMedia = 0;
+        votoEdadMayor = 0;
 
     }
 
@@ -184,7 +184,7 @@ public class Candidato {
      * @return n�mero de votos de g�nero femenino.
      */
     public int darVotosGeneroFemenino() {
-        return votosGeneroFemenino;
+        return votoGeneroFemenino;
     }
 
     /**
@@ -193,7 +193,7 @@ public class Candidato {
      * @return n�mero de votos de g�nero masculino.
      */
     public int darVotosGeneroMasculino() {
-        return votosGeneroMasculino;
+        return votoGeneroMasculino;
     }
 
     /**
@@ -202,7 +202,7 @@ public class Candidato {
      * @return n�mero de votos de edad joven.
      */
     public int darVotosEdadJoven() {
-        return votosEdadJoven;
+        return votoEdadJoven;
     }
 
     /**
@@ -211,7 +211,7 @@ public class Candidato {
      * @return n�mero de votos de edad media.
      */
     public int darVotosEdadMedia() {
-        return votosEdadMedia;
+        return votoEdadMedia;
     }
 
     /**
@@ -220,7 +220,7 @@ public class Candidato {
      * @return n�mero de votos de edad mayor.
      */
     public int darVotosEdadMayor() {
-        return votosEdadMayor;
+        return votoEdadMayor;
     }
 
     /**
@@ -311,10 +311,10 @@ public class Candidato {
     public void reiniciarConteoVotos() {
         votos = 0;
         votoGeneroMasculino = 0;
-        votosGeneroFemenino = 0;
-        votosEdadJoven = 0;
-        votosEdadMedia = 0;
-        votosEdadMayor = 0;
+        votoGeneroFemenino = 0;
+        votoEdadJoven = 0;
+        votoEdadMedia = 0;
+        votoEdadMayor = 0;
         votosInfluenciaInternet = 0;
     }
 
